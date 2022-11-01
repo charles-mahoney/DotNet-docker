@@ -7,6 +7,7 @@ COPY /deployment .
 
 #EXPOSE 80
 EXPOSE 5296
+EXPOSE 5000
 EXPOSE 41431
 RUN apt-get update && apt-get install -y telnet
 RUN apt-get update && apt-get install -y curl
@@ -38,12 +39,11 @@ RUN curl -fSL --output dotnet.tar.gz https://dotnetcli.azureedge.net/dotnet/Sdk/
 
 ## run as www-data(33), readonly
 RUN chown -R 1001:0 ./
-#RUN chown -R 1001:0 /.dotnet
 RUN chmod -R 777 ./
 RUN chmod -R 777 *.dll # if the dll's are not writeable, it won't start
 USER 1001
 
 
 
-#ENTRYPOINT ["dotnet", "myapp.dll"]
-ENTRYPOINT ["sleep", "100000000"]
+ENTRYPOINT ["dotnet", "myapp.dll"]
+#ENTRYPOINT ["sleep", "100000000"]
