@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "dXkCHc+Fn7eJHPFKTNXjIfypoeegq+BWwYXmp9idS9e7PiFZzhs3tcoQPNOY9XlQ/tcG8MnHHhQQwmVPhwUywA==",
+  "dgSpecHash": "D2fhrzBx5MUW+jf5u0SFU31338a/JByrbGgYfthHkMVFZBQAr4uFm4pNasgbRD0nwY4n5/D0fZppVk64yPN1Vw==",
   "success": true,
   "projectFilePath": "/Users/charles.mahoney/Documents/GIT/DotNet-docker/appSource/myapp/myapp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/charles.mahoney/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/6.0.10/microsoft.netcore.app.runtime.linux-x64.6.0.10.nupkg.sha512",
+    "/Users/charles.mahoney/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/6.0.10/microsoft.aspnetcore.app.runtime.linux-x64.6.0.10.nupkg.sha512",
+    "/Users/charles.mahoney/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.10/microsoft.netcore.app.host.linux-x64.6.0.10.nupkg.sha512"
+  ],
   "logs": []
 }
