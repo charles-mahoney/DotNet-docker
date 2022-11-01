@@ -31,9 +31,11 @@ RUN curl -fSL --output dotnet.tar.gz https://dotnetcli.azureedge.net/dotnet/Sdk/
     && tar -oxzf dotnet.tar.gz -C /usr/share/dotnet ./packs ./sdk ./sdk-manifests ./templates ./LICENSE.txt ./ThirdPartyNotices.txt \
     && rm dotnet.tar.gz \
     # Trigger first run experience by running arbitrary cmd
-    && dotnet help \
-    && mkdir /.dotnet \
+    && dotnet --info \
+    #&& mkdir /.dotnet \
     && dotnet CertificateInstaller.dll installca /certs/ca2.pem
+
+
 #COPY /certs /.dotnet
 
 ## run as www-data(33), readonly
