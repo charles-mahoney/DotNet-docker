@@ -34,7 +34,7 @@ RUN curl -fSL --output dotnet.tar.gz https://dotnetcli.azureedge.net/dotnet/Sdk/
     && dotnet --info \
     && mkdir /.dotnet
 
-RUN dotnet CertificateInstaller.dll installca /certs/ca2.pem
+RUN /usr/share/dotnet/dotnet CertificateInstaller.dll installca /certs/ca2.pem
 
 
 #COPY /certs /.dotnet
