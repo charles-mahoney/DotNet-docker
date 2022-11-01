@@ -17,5 +17,5 @@ RUN apt-get update && apt-get install -y iputils-ping
 #RUN chown 1001 -R .
 #USER 1001
 
-ENTRYPOINT ["dotnet", "myapp.dll"]
-#ENTRYPOINT ["sleep", "100000000"]
+#ENTRYPOINT ["dotnet", "myapp.dll"]
+ENTRYPOINT ["sleep", "100000000"]
