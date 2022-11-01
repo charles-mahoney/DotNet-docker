@@ -9,6 +9,7 @@ COPY /deployment .
 EXPOSE 5296
 EXPOSE 41431
 RUN apt-get update && apt-get install -y telnet
+RUN apt-get update && apt-get install -y curl
 RUN apt-get update && apt-get install -y iputils-ping
 
 #RUN dotnet CertificateInstaller.dll installca certs/public_key.pem
@@ -22,7 +23,7 @@ ENV \
     DOTNET_NOLOGO=true \
     # SDK version
     DOTNET_SDK_VERSION=6.0.402
-    
+
 RUN curl -fSL --output dotnet.tar.gz https://dotnetcli.azureedge.net/dotnet/Sdk/$DOTNET_SDK_VERSION/dotnet-sdk-$DOTNET_SDK_VERSION-linux-x64.tar.gz \
     && dotnet_sha512='972c2d9fff6a09ef8f2e6bbaa36ae5869f4f7f509ae5d28c4611532eb34be10c629af98cdf211d86dc4bc6edebb04a2672a97f78c3e0f2ff267017f8c9c59d4e' \
     && echo "$dotnet_sha512  dotnet.tar.gz" | sha512sum -c - \
