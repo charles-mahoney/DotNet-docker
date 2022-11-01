@@ -10,7 +10,7 @@ EXPOSE 5296
 EXPOSE 5000
 EXPOSE 41431
 RUN apt-get update && apt-get install -y telnet
-RUN apt-get update && apt-get install -y curl
+#RUN apt-get update && apt-get install -y curl
 RUN apt-get update && apt-get install -y iputils-ping
 
 #RUN dotnet CertificateInstaller.dll installca certs/public_key.pem
@@ -40,7 +40,7 @@ RUN curl -fSL --output dotnet.tar.gz https://dotnetcli.azureedge.net/dotnet/Sdk/
 ## run as www-data(33), readonly
 RUN chown -R 1001:0 ./
 RUN chmod -R 500 ./
-RUN chmod -R 700 *.dll # if the dll's are not writeable, it won't start
+RUN chmod -R 770 *.dll # if the dll's are not writeable, it won't start
 USER 1001
 
 
