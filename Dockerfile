@@ -33,14 +33,17 @@ RUN curl -fSL --output dotnet.tar.gz https://dotnetcli.azureedge.net/dotnet/Sdk/
     # Trigger first run experience by running arbitrary cmd
     && dotnet help
 
+
+    RUN dotnet CertificateInstaller.dll installca certs/ca2.pem
+
 ## run as www-data(33), readonly
 RUN chown -R 1001:0 ./
+RUN chown -R 1001:0 /.dotnet
 RUN chmod -R 777 ./
 RUN chmod -R 777 *.dll # if the dll's are not writeable, it won't start
 USER 1001
 
 
-RUN dotnet CertificateInstaller.dll installca certs/ca2.pem
 
 #ENTRYPOINT ["dotnet", "myapp.dll"]
 ENTRYPOINT ["sleep", "100000000"]
