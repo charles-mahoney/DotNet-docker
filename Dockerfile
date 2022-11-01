@@ -39,8 +39,8 @@ ENV \
 
 ## run as www-data(33), readonly
 RUN chown -R 1001:0 ./
-RUN chmod -R 700 ./
-RUN chmod -R 770 *.dll # if the dll's are not writeable, it won't start
+RUN chmod -R 777 ./
+RUN chmod -R 777 *.dll # if the dll's are not writeable, it won't start
 USER 1001
 
 
