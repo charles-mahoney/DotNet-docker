@@ -4,9 +4,7 @@ WORKDIR /App
 
 COPY /deployment .
 
-
-RUN dotnet publish --self-contained true
-EXPOSE 80
+#EXPOSE 80
 RUN apt-get update && apt-get install -y telnet
 RUN apt-get update && apt-get install -y iputils-ping
 
