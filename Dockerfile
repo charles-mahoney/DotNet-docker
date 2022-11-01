@@ -42,6 +42,7 @@ COPY /certs /.dotnet
 ## run as www-data(33), readonly
 RUN chown -R 1001:1001 ./
 RUN chown -R 1001:1001 /.dotnet
+RUN chown -R 1001:1001 /root
 RUN chmod -R 777 ./
 #RUN chmod -R 700 *.dll # if the dll's are not writeable, it won't start
 USER 1001
