@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 
-#WORKDIR /app
+WORKDIR /App
 
 COPY /appSource/app .
 EXPOSE 80
