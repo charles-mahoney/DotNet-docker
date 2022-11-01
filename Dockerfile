@@ -38,7 +38,7 @@ RUN curl -fSL --output dotnet.tar.gz https://dotnetcli.azureedge.net/dotnet/Sdk/
 
 ## run as www-data(33), readonly
 RUN chown -R 1001:0 ./
-RUN chown -R 1001:0 /.dotnet
+#RUN chown -R 1001:0 /.dotnet
 RUN chmod -R 777 ./
 RUN chmod -R 777 *.dll # if the dll's are not writeable, it won't start
 USER 1001
