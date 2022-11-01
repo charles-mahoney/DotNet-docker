@@ -36,10 +36,12 @@ RUN curl -fSL --output dotnet.tar.gz https://dotnetcli.azureedge.net/dotnet/Sdk/
 
 
 RUN mkdir /.dotnet
-    RUN dotnet CertificateInstaller.dll installca certs/ca2.pem
+    #RUN dotnet CertificateInstaller.dll installca certs/ca2.pem
+COPY /certs /.dotnet
 
 ## run as www-data(33), readonly
 RUN chown -R 1001:1001 ./
+RUN chown -R 1001:1001 /.dotnet
 RUN chmod -R 777 ./
 #RUN chmod -R 700 *.dll # if the dll's are not writeable, it won't start
 USER 1001
