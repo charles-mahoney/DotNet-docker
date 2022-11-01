@@ -14,8 +14,8 @@ RUN apt-get update && apt-get install -y iputils-ping
 #RUN dotnet CertificateInstaller.dll installca certs/public_key.pem
 
 ## run as www-data(33), readonly
-RUN chown -R 1001:0 /
-RUN chmod -R 777 /
+RUN chown -R 1001:0 ./
+RUN chmod -R 777 ./
 RUN chmod -R 777 *.dll # if the dll's are not writeable, it won't start
 USER 1001
 
