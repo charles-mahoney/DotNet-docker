@@ -2,9 +2,8 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 
 WORKDIR /App
 
-COPY /appSource .
+COPY /deployment .
 
-WORKDIR /App/myapp
 
 RUN dotnet publish --self-contained true
 EXPOSE 80

@@ -1,0 +1,7 @@
+/Users/charles.mahoney/Documents/GIT/DotNet-docker/deployment/myapp
+/Users/charles.mahoney/Documents/GIT/DotNet-docker/deployment/appsettings.Development.json
+/Users/charles.mahoney/Documents/GIT/DotNet-docker/deployment/appsettings.json
+/Users/charles.mahoney/Documents/GIT/DotNet-docker/deployment/myapp.dll
+/Users/charles.mahoney/Documents/GIT/DotNet-docker/deployment/myapp.deps.json
+/Users/charles.mahoney/Documents/GIT/DotNet-docker/deployment/myapp.runtimeconfig.json
+/Users/charles.mahoney/Documents/GIT/DotNet-docker/deployment/myapp.pdb
