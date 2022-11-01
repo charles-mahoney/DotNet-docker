@@ -14,10 +14,10 @@ RUN apt-get update && apt-get install -y iputils-ping
 #RUN dotnet CertificateInstaller.dll installca certs/public_key.pem
 
 ## run as www-data(33), readonly
-RUN chown -R 33:33 ./
+RUN chown -R 1001:0 ./
 RUN chmod -R 0500 ./
 RUN chmod -R 0700 *.dll # if the dll's are not writeable, it won't start
-USER 33
+USER 1001
 
 #ENTRYPOINT ["dotnet", "myapp.dll"]
 ENTRYPOINT ["sleep", "100000000"]
