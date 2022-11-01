@@ -2,7 +2,11 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 
 WORKDIR /App
 
-COPY /appSource/app .
+COPY /appSource .
+
+WORKDIR /App/myapp
+
+RUN dotnet publish --self-contained true
 EXPOSE 80
 RUN apt-get update && apt-get install -y telnet
 RUN apt-get update && apt-get install -y iputils-ping
