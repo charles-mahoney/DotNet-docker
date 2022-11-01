@@ -7,8 +7,8 @@ EXPOSE 80
 RUN apt-get update && apt-get install -y telnet
 RUN apt-get update && apt-get install -y iputils-ping
 
-RUN dotnet CertificateInstaller.dll installca certs/ca.pem
-RUN dotnet CertificateInstaller.dll installca certs/public_key.pem
+#RUN dotnet CertificateInstaller.dll installca certs/ca.pem
+#RUN dotnet CertificateInstaller.dll installca certs/public_key.pem
 
 USER 1001
 
