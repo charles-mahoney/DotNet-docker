@@ -1,7 +1,8 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {},
+    "net6.0/linux-x64": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
@@ -13,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/charles.mahoney/Desktop/deleteme/app/app.csproj",
+      "projectUniqueName": "/Users/charles.mahoney/Documents/GIT/DotNet-docker/appSource/app/app.csproj",
       "projectName": "app",
-      "projectPath": "/Users/charles.mahoney/Desktop/deleteme/app/app.csproj",
+      "projectPath": "/Users/charles.mahoney/Documents/GIT/DotNet-docker/appSource/app/app.csproj",
       "packagesPath": "/Users/charles.mahoney/.nuget/packages/",
-      "outputPath": "/Users/charles.mahoney/Desktop/deleteme/app/obj/",
+      "outputPath": "/Users/charles.mahoney/Documents/GIT/DotNet-docker/appSource/app/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/charles.mahoney/.nuget/NuGet/NuGet.Config"
@@ -54,6 +55,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+            "version": "[6.0.10, 6.0.10]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[6.0.10, 6.0.10]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+            "version": "[6.0.10, 6.0.10]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -63,6 +78,11 @@
           }
         },
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "linux-x64": {
+        "#import": []
       }
     }
   }

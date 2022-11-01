@@ -1,8 +1,8 @@
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 
-WORKDIR /app
+#WORKDIR /app
 
-COPY /appSource .
+COPY /appSource/app .
 EXPOSE 80
 RUN apt-get update && apt-get install -y telnet
 RUN apt-get update && apt-get install -y iputils-ping
